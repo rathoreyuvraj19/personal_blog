@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+    <div id="main">
+        <h1>My Blog</h1>
+        <a id="new" href="/new">New Post</a>
+        <% for(let i=0;i<blogs.length;i++){ %>
+            <div class="post">
+                <h3>
+                    <%= blogs[i].title%>
+                </h3>
+                <h6>
+                    <%= blogs[i].date%>
+                </h6>
+                <p>
+                    <%= blogs[i].content%>
+                </p>
+                <h6>
+                    By: <%= blogs[i].author%>
+                </h6>
+                <a href="/edit/<%=blogs[i].id%>" id="<%= blogs[i].id%>" class="edit">Edit</a>
+                <a href="/delete/<%=blogs[i].id%>" id="<%=blogs[i].id%>" class="delete">Delete</a>
+            </div>
+            <% } %>
+    </div>
+</body>
+
+</html>

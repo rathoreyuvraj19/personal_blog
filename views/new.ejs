@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New blog</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+    <div id="main">
+        <h1>New Post</h1>
+        <form action="/newPost" method="post" id="newPost">
+            <input type="text" name="title" id="title" placeholder="Blog Title" required>
+            <textarea placeholder="Content" name="content" id="content" rows="10" required></textarea>
+            <input type="text" name="author" id="author" placeholder="Author's Name" required>
+            <button type="submit" class="submit">Create Post</button>
+        </form>
+    </div>
+</body>
+
+</html>
